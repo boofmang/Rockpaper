@@ -20,7 +20,18 @@ for(let i=0; i<5; i++) {
 
 if (i=5) {
     console.log("Game Over Motherfucker! the score is, YOUR DUMB ASS:" + `${humanscore}` + "COMPUTER:" + `${botscore}`)
-    alert("Want to go again bitch ass?")
+    let answer = prompt("Want to go again bitch ass?" + "" + "YES/NO").toLowerCase();
+    if (answer === "yes") 
+        {
+        playGame()
+    }
+else if (answer === "no") {
+    alert("Well fuck off then!")
+}
+
+else {
+    alert("Really though? Figure it out")
+}
 }
 
 
@@ -49,6 +60,11 @@ if (humanchoice === botchoice)
                 botchoice === "paper" && humanchoice === "rock") {
                 console.log("get fucked on!")
                 botscore ++; }
+
+                else{
+                    alert("one of three dumshit")
+                    playRound()
+                }
         }
     
         playGame()
