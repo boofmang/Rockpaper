@@ -1,8 +1,4 @@
 
-let humanscore = 0
-let botscore = 0
-
-
     function getComputerChoice() {
         let choices = ["rock", "paper", "scissors"];
     let bot = choices[Math.floor(Math.random() * 3)];
@@ -10,11 +6,32 @@ let botscore = 0
 
 }
 
+let humanscore = 0;
+let botscore = 0;
 
+
+function playGame() {
+
+
+
+for(let i=0; i<5; i++) {
+    playRound()
+}
+
+if (i=5) {
+    console.log("Game Over Motherfucker! the score is, YOUR DUMB ASS:" + `${humanscore}` + "COMPUTER:" + `${botscore}`)
+    alert("Want to go again bitch ass?")
+}
+
+
+
+}
 function playRound() {
-    const humanchoice = prompt("Pick one bitch! Rock, Paper or Scissors?").toLowerCase();
-    const botchoice = getComputerChoice();
-    if (humanchoice === botchoice) 
+
+    let humanchoice = prompt("Pick one bitch! Rock, Paper or Scissors?").toLowerCase();
+    let botchoice = getComputerChoice();
+
+if (humanchoice === botchoice) 
     {
         console.log("Power is evenly matched!")
     }
@@ -34,7 +51,4 @@ function playRound() {
                 botscore ++; }
         }
     
-    
-
-
-playRound()
+        playGame()
